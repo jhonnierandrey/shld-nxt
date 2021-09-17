@@ -1,5 +1,4 @@
 import Footer from '../components/Footer'
-import Layout from '../components/Layout'
 import '../styles/globals.css'
 
 const MyApp = ({ Component, pageProps }) => {
