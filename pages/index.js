@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import Image from 'next/image';
 import { gql, GraphQLClient } from 'graphql-request';
 import Section from '../components/Section';
 import Navbar from '../components/Navbar';
 
-import disneyLogo from '../public/img/disney-button.png'
-import pixarLogo from '../public/img/pixar.png'
-import marvelLogo from '../public/img/marvel-button.png'
-import starWarsLogo from '../public/img/star-wars-button.png'
-import natGeoLogo from '../public/img/natgeo-button.png'
+import disneyLogo from '../public/img/franchise-disney.png';
+import pixarLogo from '../public/img/franchise-pixar.png';
+import marvelLogo from '../public/img/franchise-marvel.png';
+import starWarsLogo from '../public/img/franchise-starwars.png';
+import natGeoLogo from '../public/img/franchise-natgeo.png';
 
 export const getStaticProps = async () => {
   const url = process.env.ENDPOINT;
@@ -80,6 +81,9 @@ const Home = ({videos, account}) => {
   
   return (
     <>
+      <Head>
+        <title>Disney+ | Movies and Shows</title>
+      </Head>
       <Navbar account={account} />
       <div className="app">
         <div className="main-video">
