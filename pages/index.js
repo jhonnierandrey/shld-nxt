@@ -1,5 +1,5 @@
-import Link from 'next/Link';
-import Image from 'next/Image';
+import Link from 'next/link';
+import Image from 'next/image';
 import { gql, GraphQLClient } from 'graphql-request';
 import Section from '../components/Section';
 import Navbar from '../components/Navbar';
