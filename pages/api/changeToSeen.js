@@ -1,7 +1,7 @@
 import { GraphQLClient } from "graphql-request";
 
 
-export default async ({body}, res) => {
+export default changeToSeen = async ({body}, res) => {
     const graphcms = new GraphQLClient(process.env.ENDPOINT, {
         headers : {
             "Authorization" : process.env.GRAPH_CMS_TOKEN

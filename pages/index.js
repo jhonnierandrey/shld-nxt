@@ -55,7 +55,6 @@ export const getStaticProps = async () => {
   const videos = data.videos
   const accountData = await graphQLClient.request(accountQuery)
   const account = accountData.account
-  
 
   return {
     props: {
@@ -82,34 +81,34 @@ const Home = ({videos, account}) => {
   return (
     <>
       <Navbar account={account} />
-      <div className="App">
+      <div className="app">
         <div className="main-video">
           <img src={randomVideo(videos).thumbnail.url} alt={randomVideo(videos).title} />
         </div>
         <div className="video-feed">
           <Link href="#disneyl">
             <div className="franchise" id="disney">
-              <Image src={disneyLogo} />
+              <Image src={disneyLogo} alt="" />
             </div>
           </Link>
           <Link href="#">
             <div className="franchise" id="pixar">
-              <Image src={pixarLogo} />
+              <Image src={pixarLogo} alt="" />
             </div>
           </Link>
-          <Link href="#">
+          <Link href="/">
             <div className="franchise" id="marvel">
-              <Image src={marvelLogo} />
+              <Image src={marvelLogo} alt="" />
             </div>
           </Link>
           <Link href="#">
             <div className="franchise" id="star-wars">
-              <Image src={starWarsLogo} />
+              <Image src={starWarsLogo} alt="" />
             </div>
           </Link>
           <Link href="#">
             <div className="franchise" id="natgeo">
-              <Image src={natGeoLogo} />
+              <Image src={natGeoLogo} alt="" />
             </div>
           </Link>
         </div>

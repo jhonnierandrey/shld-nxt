@@ -1,3 +1,4 @@
+import Link from 'next/Link';
 import { useState } from 'react';
 import { gql, GraphQLClient } from 'graphql-request';
 
@@ -66,7 +67,7 @@ const Video = ({video}) => {
                 <div className="video-info">
                     <p>{video.tags.join(', ')}</p>
                     <p>{video.description}</p>
-                    <a href="/"><p>go back</p></a>
+                    <Link href="/"><p>go back</p></Link>
                     <button
                         className="video-overlay"
                         onClick={() => {
