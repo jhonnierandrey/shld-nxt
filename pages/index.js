@@ -86,27 +86,27 @@ const Home = ({videos, account}) => {
           <img src={randomVideo(videos).thumbnail.url} alt={randomVideo(videos).title} />
         </div>
         <div className="video-feed">
-          <Link href="#disneyl">
+          <Link href="#disneyl" passHref>
             <div className="franchise" id="disney">
               <Image src={disneyLogo} alt="" />
             </div>
           </Link>
-          <Link href="#">
+          <Link href="#" passHref>
             <div className="franchise" id="pixar">
               <Image src={pixarLogo} alt="" />
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/" passHref>
             <div className="franchise" id="marvel">
               <Image src={marvelLogo} alt="" />
             </div>
           </Link>
-          <Link href="#">
+          <Link href="#" passHref>
             <div className="franchise" id="star-wars">
               <Image src={starWarsLogo} alt="" />
             </div>
           </Link>
-          <Link href="#">
+          <Link href="#" passHref>
             <div className="franchise" id="natgeo">
               <Image src={natGeoLogo} alt="" />
             </div>
