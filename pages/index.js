@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { gql, GraphQLClient } from 'graphql-request';
 import Section from '../components/Section';
 import Navbar from '../components/Navbar';
+import CarouselView from '../components/CarouselView';
 
 import disneyLogo from '../public/img/franchise-disney.png';
 import pixarLogo from '../public/img/franchise-pixar.png';
@@ -86,9 +87,10 @@ const Home = ({videos, account}) => {
       </Head>
       <Navbar account={account} />
       <div className="app">
-        <div className="main-video">
+        {/* <div className="main-video">
           <img src={randomVideo(videos).thumbnail.url} alt={randomVideo(videos).title} />
-        </div>
+        </div> */}
+        <CarouselView previews={videos}/>
         <div className="video-feed">
           <Link href="#disneyl" passHref>
             <div className="franchise" id="disney">
